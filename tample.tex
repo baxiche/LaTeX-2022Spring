@@ -102,6 +102,7 @@
     \left.{#1}\phantom{\Big|}\right|}
 
 %very nice
+\usepackage{nicematrix}
 
 \usepackage{cancel}
 %\usepackage[thicklines]{cancel}
@@ -116,7 +117,7 @@
     {\color{red!70}{#1}}}
 
 \usepackage{mathrsfs} %English Calligraphy
-\usepackage{bm} % 數學粗體
+\usepackage{bm}
 
 \usepackage{soul}
 \setul{0.5ex}{0.2ex}
@@ -168,6 +169,7 @@
 %\newmdtheoremenv{boxx}[lemma]{Theorem}
 %\newmdtheoremenv{lemo}{Lemma}
 %\newmdenv{}{}
+
 %Just a box
 \newcounter{boxthm} 
 \setcounter{boxthm}{0}
@@ -210,7 +212,7 @@
         linewidth=0.6pt,topline=true,%
         frametitleaboveskip=\dimexpr-\ht\strutbox\relax}
     \begin{mdframed}\relax}{\end{mdframed}}
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Add graph
 \usepackage{import}
@@ -222,18 +224,44 @@
     \import{/Users/baxiche/Documents/LaTeX/Drawing/}{#1.pdf_tex}
 }
 
-\usepackage{nicematrix}
-
 \title{Solutions of selection problems}
 %\author{}
 %\date{}
 \begin{document}
 \fontsize{12pt}{20pt}\selectfont
-%設定字體大小
 %\maketitle
 %\tableofcontents
 
 Just test for new trash session.
-        
 
+\[
+    \begin{pNiceMatrix}[margin]
+    \Block[borders={bottom,right}]{3-3}{\begin{array}{ccc}
+      \lambda & 1       & 0       \\
+      0       & \lambda & 1       \\
+      0       & 0       & \lambda \\
+    \end{array}} & & & 0 & 0 & 0 & 0 & 0 & 0   \\
+    & &  & 0 & 0 & 0 & 0 & 0 & 0 \\
+    & &  & 0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & \Block[draw]{3-3}{\begin{array}{ccc}
+      \lambda & 1       & 0       \\
+      0       & \lambda & 1       \\
+      0       & 0       & \lambda \\
+    \end{array}} & & & 0 & 0 & 0 \\
+    0 & 0 & 0 &                       & & & 0 & 0 & 0 \\
+    0 & 0 & 0 &                       & & & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0 & \Block[draw]{2-2}{\begin{array}{cc}
+      \lambda & 1        \\
+      0       & \lambda  \\  
+    \end{array}} & & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0 & & & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \Block[borders={left,top}]{1-1}{\begin{array}{c} \lambda \end{array}} 
+    \end{pNiceMatrix}=\begin{pNiceMatrix}[margin]
+      \Block[borders={bottom,right}]{1-1}{J_1} & O & O & O  \\
+      O & \Block[draw]{1-1}{J_2} & O & O  \\
+      O & O & \Block[draw]{1-1}{J_3} & O \\
+      O & O & O & \Block[borders={top,left}]{1-1}{J_4}
+    \end{pNiceMatrix}
+    \]
+        
 \end{document}
